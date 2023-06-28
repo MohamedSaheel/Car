@@ -1,0 +1,154 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(75deg, skyblue, violet);
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    color: white;
+    animation: header 2s ease-in-out;
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+header h1{
+    margin-left: 20px;
+}
+nav li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 600;
+}
+nav li:hover{
+    color: red;
+    text-decoration: underline;
+    transition: .6s ease-in-out;
+    transform: translateY(-100%);
+    
+}
+.main
+{
+    width: 100%;
+    display: flex;
+}
+
+.content
+{
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+    color: black;
+    overflow: hidden;
+    animation: content 2s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+}
+.content > h1{
+    letter-spacing: 0.6rem;
+    margin-bottom: 1%;
+    font-size: 4rem;
+}
+.content > h3{
+    letter-spacing: 0.3rem;
+    margin-bottom: 1%;
+    font-family: sans-serif;
+}
+span{
+    color: orangered;
+}
+
+.content > p{
+    font-family: sans-serif;
+    margin-bottom: 3%;
+    word-spacing: 0.3rem;
+    font-size: 1.5rem;
+}
+button{
+    padding: 10px 15px;
+    margin-left: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: black;
+}
+
+button:hover{
+    background-color: red;
+}
+
+.image{
+    width: 50%;
+    z-index: -1;
+}
+
+img{
+    width: 35rem;
+    animation: car 5s ease-in-out;
+} 
+@keyframes car{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-250%);
+    }
+}
+@media screen and (max-width:1200px) {
+    .content{
+        text-align: center;
+        width: 100%;
+    }
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -8%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 20rem;
+    }
+}   
+@media screen and (max-width:576px) {
+    .content{
+        text-align: center;
+        width: 100%;
+    }
+    .content h1,h3,p{
+        margin-bottom: 10px;
+    }
+    button{
+        margin-top: 20px;
+    }
+    button:hover{
+        background-color: yellowgreen;
+        color: black;
+    }
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -6%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 20rem;
+    }
+}   
